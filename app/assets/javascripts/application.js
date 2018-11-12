@@ -13,5 +13,18 @@
 //= require jquery
 //= require rails-ujs
 //= require turbolinks
-//= require materialize-sprockets
+//= require bootstrap-sprockets
 //= require_tree .
+
+function booklog_minishelf(json) {
+  var items = json["books"];
+  var html = "";
+
+  for(var i = 0; i < items.length; i++) {
+    var elem = items[i];
+    var text = '<ul class="bookshelf"><li class="bookImage"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '" title="' + elem["title"] + '"width="52" height="75" alt="No Image" /></a></li><li class="bookTitle"><a href="' + elem["url"] + '" target="_blank">' + elem["title"] + '</a><div class="bookAuthor">' + elem["author"] + '</div></li></ul>';
+    html += text;
+  }
+  document.getElementById("recent_books").innerHTML = html;
+}
+
