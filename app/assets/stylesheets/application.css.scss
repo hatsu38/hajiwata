@@ -15,6 +15,34 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+//パララックス
+// section:not(#profile){
+//   background-color:#fff;
+//   position: -webkit-sticky;
+//   position: sticky;
+//   top:0px;
+// }
+// section{
+//   background-color:#fff;
+//   position: -webkit-sticky;
+//   position: sticky;
+// }
+// section:not(#profile){
+//   top:180px;
+// }
+// #profile{
+//   top:0;
+//   z-index:1;
+// }
+// #projects{
+//   z-index:4;
+// }
+// #skill{
+//   z-index:5;
+// }
+// #act{
+//   z-index:7;
+// }
 .section_border{
   border-bottom: 1px solid #efefef;
   margin:0 16px;
@@ -23,7 +51,9 @@
   font-size:2.2rem;
   color:#525558;
   text-align:center;
-  margin:2rem auto 1rem;
+  margin:0;
+  padding:2rem 0 1rem;
+  // line-height:100px;
 }
 
 #profile{
@@ -102,7 +132,7 @@
   }
   .list-group{
     width:90%;
-    margin:0 16px;
+    margin:0 16px 30px;
     li{
       list-style:none;
       margin:.5rem 0;
