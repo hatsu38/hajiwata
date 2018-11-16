@@ -17,6 +17,7 @@
 //= require_tree .
 
 $(document).ready(function(){
+
   var window_height = $(window).height(),
       now_scroll_pos = $(this).scrollTop(),
       front_skill = $('#front_skill').offset().top-window_height+350+605,
@@ -57,6 +58,7 @@ $(document).ready(function(){
     metagallery_desplay(now_scroll_pos,metagallery);
     cafepedia_desplay(now_scroll_pos,cafepedia);
   });
+
 });
 
 function front_skill_desplay(now_scroll_pos,front_skill){
@@ -130,6 +132,18 @@ function booklog_minishelf(json) {
   for(var i = 0; i < items.length; i++) {
     var elem = items[i];
     var text = '<ul class="bookshelf"><li class="bookImage"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '" title="' + elem["title"] + '"width="52" height="75" alt="No Image" /></a></li><li class="bookTitle"><a href="' + elem["url"] + '" target="_blank">' + elem["title"] + '</a><div class="bookAuthor">' + elem["author"] + '</div></li></ul>';
+    html += text;
+  }
+  document.getElementById("recent_books").innerHTML = html;
+}
+
+function booklog_minishelf_img(json) {
+  var items = json["books"];
+  var html = "";
+
+  for(var i = 0; i < items.length; i++) {
+    var elem = items[i];
+    var text = '<li class="bookImage"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
     html += text;
   }
   document.getElementById("recent_books").innerHTML = html;
