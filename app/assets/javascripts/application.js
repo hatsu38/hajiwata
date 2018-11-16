@@ -21,11 +21,14 @@ $(document).ready(function(){
   var front_skill = $('#front_skill').offset().top-window_height+350;
   var back_skill = $('#back_skill').offset().top-window_height+250;
   var server_skill = $('#server_skill').offset().top-window_height+300;
+  var project_title = $("#project_title").offset().top;
+  var skill_title = $("#skill_title").offset().top;
+  var act_title = $("#act_title").offset().top;
 
   $(window).scroll(function() {
     var now_scroll_pos = $(this).scrollTop();
+
     if(now_scroll_pos >= front_skill){
-      console.log("from");
       $("#html_progress").addClass("lv_five");
       $("#css_progress").addClass("lv_five");
       $("#js_progress").addClass("lv_four");
@@ -41,6 +44,24 @@ $(document).ready(function(){
     if(now_scroll_pos >= server_skill){
       $("#heroku_progress").addClass("lv_three");
       $("#aws_progress").addClass("lv_two");
+    }
+
+    if(now_scroll_pos >= project_title && now_scroll_pos <= skill_title){
+      $("#project_title").addClass("section_title_top");
+      $("#skill_title").removeClass("section_title_top");
+      $("#act_title").removeClass("section_title_top");
+    }else{
+      $("#project_title").removeClass("section_title_top");
+    }
+    if(now_scroll_pos >= skill_title && now_scroll_pos <= act_title){
+      $("#skill_title").addClass("section_title_top");
+      $("#project_title").removeClass("section_title_top");
+      $("#act_title").removeClass("section_title_top");
+    }
+    if(now_scroll_pos >= act_title){
+      $("#act_title").addClass("section_title_top");
+      $("#skill_title").removeClass("section_title_top");
+      $("#project_title").removeClass("section_title_top");
     }
   });
 

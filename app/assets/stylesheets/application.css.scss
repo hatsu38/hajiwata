@@ -75,6 +75,10 @@ section{
   // padding:2rem 0 1rem;
   line-height:65px;
 }
+.section_title_top{
+  background: rgb(216, 235, 233);
+  color:#485554;
+}
 
 #profile{
   // padding-bottom:8px;
@@ -120,9 +124,14 @@ section{
   }
   .profile_text_block{
     padding:0 16px 8px;
-    text-align:center;
     p{
-      margin:.5rem 0;
+      margin:.5rem 0 1.5rem;
+    }
+    .lang_eng{
+      font-size:1.44rem;
+    }
+    .lang_jpn{
+      font-size:1.3rem;
     }
   }
 }
