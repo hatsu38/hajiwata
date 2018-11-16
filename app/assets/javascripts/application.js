@@ -13,8 +13,41 @@
 //= require jquery
 //= require rails-ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+  var window_height = $(window).height();
+  var front_skill = $('#front_skill').offset().top-window_height+250;
+  var back_skill = $('#back_skill').offset().top-window_height+250;
+  var server_skill = $('#server_skill').offset().top-window_height+250;
+
+  $(window).scroll(function() {
+    var now_scroll_pos = $(this).scrollTop();
+    if(now_scroll_pos >= front_skill){
+      $("#html_progress").addClass("lv_five");
+      $("#css_progress").addClass("lv_five");
+      $("#js_progress").addClass("lv_four");
+      $("#jquery_progress").addClass("lv_four");
+      $("#vue_progress").addClass("lv_three");
+    }
+
+    if(now_scroll_pos >= back_skill){
+      $("#ruby_progress").addClass("lv_four");
+      $("#ror_progress").addClass("lv_four");
+    }
+
+    if(now_scroll_pos >= server_skill){
+      $("#heroku_progress").addClass("lv_three");
+      $("#aws_progress").addClass("lv_two");
+    }
+  });
+
+
+  $("#ror_progress").on('click',function(){
+    console.log(this)
+    $("#ror_progress").css("width","100%");
+  });
+});
 
 function booklog_minishelf(json) {
   var items = json["books"];
