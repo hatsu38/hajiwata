@@ -18,13 +18,18 @@
 
 $(document).ready(function(){
   var window_height = $(window).height();
-  var front_skill = $('#front_skill').offset().top-window_height+250;
+  var front_skill = $('#front_skill').offset().top-window_height+350;
   var back_skill = $('#back_skill').offset().top-window_height+250;
-  var server_skill = $('#server_skill').offset().top-window_height+250;
+  var server_skill = $('#server_skill').offset().top-window_height+300;
 
+    console.log(front_skill);
+    console.log(back_skill);
+    console.log(server_skill);
   $(window).scroll(function() {
     var now_scroll_pos = $(this).scrollTop();
+    console.log(now_scroll_pos);
     if(now_scroll_pos >= front_skill){
+      console.log("from");
       $("#html_progress").addClass("lv_five");
       $("#css_progress").addClass("lv_five");
       $("#js_progress").addClass("lv_four");
@@ -33,11 +38,13 @@ $(document).ready(function(){
     }
 
     if(now_scroll_pos >= back_skill){
+      console.log("back");
       $("#ruby_progress").addClass("lv_four");
       $("#ror_progress").addClass("lv_four");
     }
 
     if(now_scroll_pos >= server_skill){
+      console.log("serv");
       $("#heroku_progress").addClass("lv_three");
       $("#aws_progress").addClass("lv_two");
     }
