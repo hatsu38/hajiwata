@@ -13,6 +13,7 @@
 //= require jquery
 //= require rails-ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
 
 $(document).ready(function(){
@@ -42,11 +43,6 @@ $(document).ready(function(){
     }
   });
 
-
-  $("#ror_progress").on('click',function(){
-    console.log(this)
-    $("#ror_progress").css("width","100%");
-  });
 });
 
 function booklog_minishelf(json) {
