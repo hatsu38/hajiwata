@@ -34,7 +34,12 @@ $(document).ready(function(){
 
       github = $(".github_contribution").offset().top-window_height,
 
-      book_0 = $(".book_0").offset().top-window_height;
+      book_1 = $(".book_1").offset().top-window_height;
+      book_2 = $(".book_2").offset().top-window_height;
+      book_3 = $(".book_3").offset().top-window_height;
+      book_4 = $(".book_4").offset().top-window_height;
+      book_5 = $(".book_5").offset().top-window_height;
+      book_6 = $(".book_6").offset().top-window_height;
 
   front_skill_desplay(now_scroll_pos,front_skill);
   back_skill_desplay(now_scroll_pos,back_skill);
@@ -50,7 +55,12 @@ $(document).ready(function(){
 
   github_desplay(now_scroll_pos,github);
 
-  book_0_desplay(now_scroll_pos,book_0);
+  book_1_desplay(now_scroll_pos,book_1);
+  book_2_desplay(now_scroll_pos,book_2);
+  book_3_desplay(now_scroll_pos,book_3);
+  book_4_desplay(now_scroll_pos,book_4);
+  book_5_desplay(now_scroll_pos,book_5);
+  book_6_desplay(now_scroll_pos,book_6);
   $(window).scroll(function() {
     var now_scroll_pos = $(this).scrollTop();
 
@@ -68,7 +78,12 @@ $(document).ready(function(){
 
     github_desplay(now_scroll_pos,github);
 
-    book_0_desplay(now_scroll_pos,book_0);
+    book_1_desplay(now_scroll_pos,book_1);
+    book_2_desplay(now_scroll_pos,book_2);
+    book_3_desplay(now_scroll_pos,book_3);
+    book_4_desplay(now_scroll_pos,book_4);
+    book_5_desplay(now_scroll_pos,book_5);
+    book_6_desplay(now_scroll_pos,book_6);
   });
 
 });
@@ -163,11 +178,47 @@ function github_desplay(now_scroll_pos,github){
   }
 }
 
-function book_0_desplay(now_scroll_pos,book_0){
-  if(now_scroll_pos >= book_0){
-    $(".book_0").addClass("fadein_anime");
+function book_1_desplay(now_scroll_pos,book_1){
+  if(now_scroll_pos >= book_1){
+    $(".book_1").addClass("fadein_anime");
   }else{
-    $(".book_0").removeClass("fadein_anime");
+    $(".book_1").removeClass("fadein_anime");
+  }
+}
+
+function book_2_desplay(now_scroll_pos,book_2){
+  if(now_scroll_pos >= book_2){
+    $(".book_2").addClass("fadein_anime");
+  }else{
+    $(".book_2").removeClass("fadein_anime");
+  }
+}
+function book_3_desplay(now_scroll_pos,book_3){
+  if(now_scroll_pos >= book_3){
+    $(".book_3").addClass("fadein_anime");
+  }else{
+    $(".book_3").removeClass("fadein_anime");
+  }
+}
+function book_4_desplay(now_scroll_pos,book_4){
+  if(now_scroll_pos >= book_4){
+    $(".book_4").addClass("fadein_anime");
+  }else{
+    $(".book_4").removeClass("fadein_anime");
+  }
+}
+function book_5_desplay(now_scroll_pos,book_5){
+  if(now_scroll_pos >= book_5){
+    $(".book_5").addClass("fadein_anime");
+  }else{
+    $(".book_5").removeClass("fadein_anime");
+  }
+}
+function book_6_desplay(now_scroll_pos,book_6){
+  if(now_scroll_pos >= book_6){
+    $(".book_6").addClass("fadein_anime");
+  }else{
+    $(".book_6").removeClass("fadein_anime");
   }
 }
 
@@ -189,7 +240,19 @@ function booklog_minishelf_img(json) {
 
   for(var i = 0; i < items.length; i++) {
     var elem = items[i];
-    var text = '<li id="book_'+i+'" class="bookImage hidden_anime book_0"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    if(i <= 4){
+      var text = '<li class="bookImage hidden_anime book_1"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    }else if(i > 4 && i <= 9){
+      var text = '<li class="bookImage hidden_anime book_2"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    }else if(i > 9 && i <= 14){
+      var text = '<li class="bookImage hidden_anime book_3"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    }else if(i > 14 && i <= 19){
+      var text = '<li class="bookImage hidden_anime book_4"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    }else if(i > 19 && i <= 24){
+      var text = '<li class="bookImage hidden_anime book_5"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    }else if(i > 24 && i <= 29){
+      var text = '<li class="bookImage hidden_anime book_6"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '"alt="'+elem["title"]+'" /></a></li>';
+    }
     html += text;
   }
   document.getElementById("recent_books").innerHTML = html;
