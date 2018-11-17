@@ -20,9 +20,24 @@ $(document).ready(function(){
 
   var window_height = $(window).height(),
       now_scroll_pos = $(this).scrollTop(),
+
+      myname = $('h1').offset().top-window_height,
+      myname_top = $('h1').offset().top,
+
+      snsblock = $('.sns_block').offset().top-window_height,
+      snsblock_top = $('.sns_block').offset().top,
+
+      lang_eng = $('.lang_eng').offset().top-window_height,
+      lang_jpn = $('.lang_jpn').offset().top-window_height,
+      lang_eng_top = $('.lang_eng').offset().top,
+      lang_jpn_top = $('.lang_jpn').offset().top,
+
       front_skill = $('#front_skill').offset().top-window_height,
       back_skill = $('#back_skill').offset().top-window_height,
       server_skill = $('#server_skill').offset().top-window_height,
+      front_skill_top = $('#front_skill').offset().top+$("#front_skills").height(),
+      back_skill_top = $('#back_skill').offset().top+$("#back_skills").height(),
+      server_skill_top = $('#server_skill').offset().top+$("#server_skills").height(),
 
       project_title = $("#project_title").offset().top,
       skill_title = $("#skill_title").offset().top,
@@ -31,6 +46,9 @@ $(document).ready(function(){
       tedradio = $("#tedradio_project").offset().top-window_height,
       metagallery = $("#metagallery_project").offset().top-window_height,
       cafepedia = $("#cafepedia_project").offset().top-window_height,
+      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height()+$("#project_title").height(),
+      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height()+$("#project_title").height(),
+      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height()+$("#project_title").height(),
 
       github = $(".github_contribution").offset().top-window_height,
 
@@ -41,9 +59,15 @@ $(document).ready(function(){
       book_5 = $(".book_5").offset().top-window_height;
       book_6 = $(".book_6").offset().top-window_height;
 
-  front_skill_desplay(now_scroll_pos,front_skill);
-  back_skill_desplay(now_scroll_pos,back_skill);
-  server_skill_desplay(now_scroll_pos,server_skill);
+  myname_desplay(now_scroll_pos,myname,myname_top);
+  snsblock_desplay(now_scroll_pos,snsblock,snsblock_top);
+
+  eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top);
+  jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top);
+
+  front_skill_desplay(now_scroll_pos,front_skill,front_skill_top);
+  back_skill_desplay(now_scroll_pos,back_skill,back_skill_top);
+  server_skill_desplay(now_scroll_pos,server_skill,server_skill_top);
 
   project_title_desplay(now_scroll_pos,project_title,skill_title);
   skill_title_desplay(now_scroll_pos,skill_title,act_title);
@@ -61,20 +85,27 @@ $(document).ready(function(){
   book_4_desplay(now_scroll_pos,book_4);
   book_5_desplay(now_scroll_pos,book_5);
   book_6_desplay(now_scroll_pos,book_6);
+
   $(window).scroll(function() {
     var now_scroll_pos = $(this).scrollTop();
 
-    front_skill_desplay(now_scroll_pos,front_skill);
-    back_skill_desplay(now_scroll_pos,back_skill);
-    server_skill_desplay(now_scroll_pos,server_skill);
+    myname_desplay(now_scroll_pos,myname,myname_top);
+    snsblock_desplay(now_scroll_pos,snsblock,snsblock_top);
+
+    eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top);
+    jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top);
+
+    front_skill_desplay(now_scroll_pos,front_skill,front_skill_top);
+    back_skill_desplay(now_scroll_pos,back_skill,back_skill_top);
+    server_skill_desplay(now_scroll_pos,server_skill,server_skill_top);
 
     project_title_desplay(now_scroll_pos,project_title,skill_title);
     skill_title_desplay(now_scroll_pos,skill_title,act_title);
     act_title_desplay(now_scroll_pos,act_title);
 
-    tedradio_desplay(now_scroll_pos,tedradio);
-    metagallery_desplay(now_scroll_pos,metagallery);
-    cafepedia_desplay(now_scroll_pos,cafepedia);
+    tedradio_desplay(now_scroll_pos,tedradio,tedradio_top);
+    metagallery_desplay(now_scroll_pos,metagallery,metagallery_top);
+    cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top);
 
     github_desplay(now_scroll_pos,github);
 
@@ -85,11 +116,42 @@ $(document).ready(function(){
     book_5_desplay(now_scroll_pos,book_5);
     book_6_desplay(now_scroll_pos,book_6);
   });
-
 });
 
-function front_skill_desplay(now_scroll_pos,front_skill){
-  if(now_scroll_pos >= front_skill){
+function myname_desplay(now_scroll_pos,myname,myname_top){
+  if((now_scroll_pos >= myname && now_scroll_pos <= myname_top)){
+    $("h1").addClass("fadein_anime");
+  }else{
+    $("h1").removeClass("fadein_anime");
+  }
+};
+
+function snsblock_desplay(now_scroll_pos,snsblock,snsblock_top){
+  if((now_scroll_pos >= snsblock && now_scroll_pos <= snsblock_top)){
+    $(".sns_block").addClass("fadein_anime");
+  }else{
+    $(".sns_block").removeClass("fadein_anime");
+  }
+};
+
+function eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top){
+  if((now_scroll_pos >= lang_eng && now_scroll_pos <= lang_eng_top)){
+    $(".lang_eng").addClass("fadein_anime");
+  }else{
+    $(".lang_eng").removeClass("fadein_anime");
+  }
+};
+
+function jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top){
+  if((now_scroll_pos >= lang_jpn) && (now_scroll_pos <= lang_jpn_top)){
+    $(".lang_jpn").addClass("fadein_anime");
+  }else{
+    $(".lang_jpn").removeClass("fadein_anime");
+  }
+};
+
+function front_skill_desplay(now_scroll_pos,front_skill,front_skill_top){
+  if(now_scroll_pos >= front_skill && now_scroll_pos <= front_skill_top){
     $("#html_progress").addClass("lv_five");
     $("#css_progress").addClass("lv_five");
     $("#js_progress").addClass("lv_four");
@@ -103,8 +165,8 @@ function front_skill_desplay(now_scroll_pos,front_skill){
     $("#vue_progress").removeClass("lv_three");
   }
 }
-function back_skill_desplay(now_scroll_pos,back_skill){
-  if(now_scroll_pos >= back_skill){
+function back_skill_desplay(now_scroll_pos,back_skill,back_skill_top){
+  if(now_scroll_pos >= back_skill && now_scroll_pos <= back_skill_top){
     $("#ruby_progress").addClass("lv_four");
     $("#ror_progress").addClass("lv_four");
   }else{
@@ -113,8 +175,8 @@ function back_skill_desplay(now_scroll_pos,back_skill){
   }
 }
 
-function server_skill_desplay(now_scroll_pos,server_skill){
-  if(now_scroll_pos >= server_skill){
+function server_skill_desplay(now_scroll_pos,server_skill,server_skill_top){
+  if(now_scroll_pos >= server_skill && now_scroll_pos <= server_skill_top){
     $("#heroku_progress").addClass("lv_three");
     $("#aws_progress").addClass("lv_two");
   }else{
@@ -148,22 +210,22 @@ function act_title_desplay(now_scroll_pos,act_title){
   }
 }
 
-function tedradio_desplay(now_scroll_pos,tedradio){
-  if(now_scroll_pos >= tedradio){
+function tedradio_desplay(now_scroll_pos,tedradio,tedradio_top){
+  if(now_scroll_pos >= tedradio && now_scroll_pos <= tedradio_top){
     $("#tedradio_project").addClass("fadein_anime");
   }else{
     $("#tedradio_project").removeClass("fadein_anime");
   }
 }
-function metagallery_desplay(now_scroll_pos,metagallery){
-  if(now_scroll_pos >= metagallery){
+function metagallery_desplay(now_scroll_pos,metagallery,metagallery_top){
+  if(now_scroll_pos >= metagallery && now_scroll_pos <= metagallery_top){
     $("#metagallery_project").addClass("fadein_anime");
   }else{
     $("#metagallery_project").removeClass("fadein_anime");
   }
 }
-function cafepedia_desplay(now_scroll_pos,cafepedia){
-  if(now_scroll_pos >= cafepedia){
+function cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top){
+  if(now_scroll_pos >= cafepedia && now_scroll_pos <= cafepedia_top){
     $("#cafepedia_project").addClass("fadein_anime");
   }else{
     $("#cafepedia_project").removeClass("fadein_anime");

@@ -179,15 +179,15 @@ section{
   }
   .list-group{
     margin:0 16px 30px;
+    #front_skills{
+      margin-top:0;
+      margin-bottom:.1rem;
+    }
+    #back_skills,#server_skills{
+        margin-top:3rem;
+    }
     h3{
       font-size:1.8rem;
-      margin-bottom:.1rem;
-      &:first-child{
-        margin-top:0;
-      }
-      &:not(first-child){
-        margin-top:3rem;
-      }
     }
     .skill_list{
       width:90%;

@@ -8,8 +8,8 @@
     </div>
   </div>
   <div class="parallax parallax_prof">
-    <h1>Hajime Watanabe</h1>
-    <div class="sns_block">
+    <h1 class="hidden_anime">Hajime Watanabe</h1>
+    <div class="sns_block hidden_anime">
       <a href="https://twitter.com/hatsu_38">
         <i class="fab fa-twitter"></i>
       </a>
@@ -24,8 +24,8 @@
       </a>
     </div>
     <div class="profile_text_block">
-      <p class="lang_eng">I am 24 years old writing a code at a cafe. It is happy how far you can maximize "number of users × customer satisfaction" with your service. Starbucks | Planetarium | Shogi | TED | Ruby | Rails | Vue.js</p>
-      <p class="lang_jpn">カフェでコード描く24歳。「ユーザー数×顧客満足度」が自分のサービスでどこまで最大化出来るか、それが幸せ。スタバ | プラネタリウム | 将棋 | TED | Ruby | Rails | Vue.js</p>
+      <p class="lang_eng hidden_anime">I am 24 years old writing a code at a cafe. It is happy how far you can maximize "number of users × customer satisfaction" with your service. Starbucks | Planetarium | Shogi | TED | Ruby | Rails | Vue.js</p>
+      <p class="lang_jpn hidden_anime">カフェでコード描く24歳。「ユーザー数×顧客満足度」が自分のサービスでどこまで最大化出来るか、それが幸せ。スタバ | プラネタリウム | 将棋 | TED | Ruby | Rails | Vue.js</p>
     </div>
   </div>
 </section>
@@ -68,45 +68,48 @@
     <h2 id="skill_title" class="section_title skill_section_title">Skills</h2>
   </div>
   <ul class="list-group skills parallax parallax_content_skill">
-    <h3 id="front_skill" class="skill_list_title">フロントエンド</h3>
-    <div class="skill_list">
-      <li class="html_skill">
-        <span class="skill_name">HTML5</span>
-        <!-- <span class="skill_level">Lv.5</span> -->
-        <div class="progress">
-          <div id="html_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.5</div>
-        </div>
-      </li>
-      <li class="css_skill">
-        <span class="skill_name">CSS3</span>
-        <!-- <span class="skill_level">Lv.5</span> -->
-        <div class="progress">
-          <div id="css_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.5</div>
-        </div>
-      </li>
-      <li class="js_skill">
-        <span class="skill_name">Javascript</span>
-        <!-- <span class="skill_level">Lv.4</span> -->
-        <div class="progress">
-          <div id="js_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.4</div>
-        </div>
-      </li>
-      <li class="jquery_skill">
-        <span class="skill_name">jQuery</span>
-        <!-- <span class="skill_level">Lv.4</span> -->
-        <div class="progress">
-          <div id="jquery_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.4</div>
-        </div>
-      </li>
-      <li class="vue_skill">
-        <span class="skill_name">Vue.js</span>
-        <!-- <span class="skill_level">Lv.3</span> -->
-        <div class="progress">
-          <div id="vue_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.3</div>
-        </div>
-      </li>
+    <div id="front_skills">
+      <h3 id="front_skill" class="skill_list_title">フロントエンド</h3>
+      <div class="skill_list">
+        <li class="html_skill">
+          <span class="skill_name">HTML5</span>
+          <!-- <span class="skill_level">Lv.5</span> -->
+          <div class="progress">
+            <div id="html_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.5</div>
+          </div>
+        </li>
+        <li class="css_skill">
+          <span class="skill_name">CSS3</span>
+          <!-- <span class="skill_level">Lv.5</span> -->
+          <div class="progress">
+            <div id="css_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.5</div>
+          </div>
+        </li>
+        <li class="js_skill">
+          <span class="skill_name">Javascript</span>
+          <!-- <span class="skill_level">Lv.4</span> -->
+          <div class="progress">
+            <div id="js_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.4</div>
+          </div>
+        </li>
+        <li class="jquery_skill">
+          <span class="skill_name">jQuery</span>
+          <!-- <span class="skill_level">Lv.4</span> -->
+          <div class="progress">
+            <div id="jquery_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.4</div>
+          </div>
+        </li>
+        <li class="vue_skill">
+          <span class="skill_name">Vue.js</span>
+          <!-- <span class="skill_level">Lv.3</span> -->
+          <div class="progress">
+            <div id="vue_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.3</div>
+          </div>
+        </li>
+      </div>
     </div>
 
+    <div id="back_skills">
     <h3 id="back_skill" class="skill_list_title">バックエンド</h3>
     <div class="skill_list">
       <li class="ruby_skill">
@@ -124,23 +127,26 @@
         </div>
       </li>
     </div>
+    </div>
 
-    <h3 id="server_skill" class="skill_list_title">サーバー</h3>
-    <div class="skill_list">
-      <li class="heroku_skill">
-        <span class="skill_name">Heroku</span>
-        <!-- <span class="skill_level">Lv.3</span> -->
-        <div class="progress">
-          <div id="heroku_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.3</div>
-        </div>
-      </li>
-      <li class="aws_skill">
-        <span class="skill_name">AWS</span>
-        <!-- <span class="skill_level">Lv.2</span> -->
-        <div class="progress">
-          <div id="aws_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.2</div>
-        </div>
-      </li>
+    <div id="server_skills">
+      <h3 id="server_skill" class="skill_list_title">サーバー</h3>
+      <div class="skill_list">
+        <li class="heroku_skill">
+          <span class="skill_name">Heroku</span>
+          <!-- <span class="skill_level">Lv.3</span> -->
+          <div class="progress">
+            <div id="heroku_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.3</div>
+          </div>
+        </li>
+        <li class="aws_skill">
+          <span class="skill_name">AWS</span>
+          <!-- <span class="skill_level">Lv.2</span> -->
+          <div class="progress">
+            <div id="aws_progress" class="progress-bar progress-bar-striped" role="progressbar" >Lv.2</div>
+          </div>
+        </li>
+      </div>
     </div>
     <!-- <li class="github_skill"> -->
     <!--   <span class="skill_name">Github</span> -->
