@@ -63,8 +63,8 @@ $(document).ready(function(){
   myname_desplay(now_scroll_pos,myname);
   snsblock_desplay(now_scroll_pos,snsblock);
 
-  eng_prof_desplay(now_scroll_pos,lang_eng);
-  jpn_prof_desplay(now_scroll_pos,lang_jpn);
+  eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top);
+  jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top);
 
   front_skill_desplay(now_scroll_pos,front_skill,front_skill_top);
   back_skill_desplay(now_scroll_pos,back_skill,back_skill_top);
@@ -74,9 +74,9 @@ $(document).ready(function(){
   skill_title_desplay(now_scroll_pos,skill_title,act_title);
   act_title_desplay(now_scroll_pos,act_title);
 
-  tedradio_desplay(now_scroll_pos,tedradio);
-  metagallery_desplay(now_scroll_pos,metagallery);
-  cafepedia_desplay(now_scroll_pos,cafepedia);
+  tedradio_desplay(now_scroll_pos,tedradio,tedradio_top);
+  metagallery_desplay(now_scroll_pos,metagallery,metagallery_top);
+  cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top);
 
   github_desplay(now_scroll_pos,github,github_top);
 
@@ -89,8 +89,8 @@ $(document).ready(function(){
 
   $(window).scroll(function() {
     var now_scroll_pos = $(this).scrollTop();
-  var window_height = $(window).height(),
-      now_scroll_pos = $(this).scrollTop(),
+    var window_height = $(window).height(),
+        now_scroll_pos = $(this).scrollTop(),
 
       myname = $('h1').offset().top-window_height,
       myname_top = $('h1').offset().top,
@@ -124,11 +124,11 @@ $(document).ready(function(){
       github = $(".github_contribution").offset().top-window_height,
       github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
 
-      book_1 = $(".book_1").offset().top-window_height;
-      book_2 = $(".book_2").offset().top-window_height;
-      book_3 = $(".book_3").offset().top-window_height;
-      book_4 = $(".book_4").offset().top-window_height;
-      book_5 = $(".book_5").offset().top-window_height;
+      book_1 = $(".book_1").offset().top-window_height,
+      book_2 = $(".book_2").offset().top-window_height,
+      book_3 = $(".book_3").offset().top-window_height,
+      book_4 = $(".book_4").offset().top-window_height,
+      book_5 = $(".book_5").offset().top-window_height,
       book_6 = $(".book_6").offset().top-window_height;
 
     myname_desplay(now_scroll_pos,myname);
