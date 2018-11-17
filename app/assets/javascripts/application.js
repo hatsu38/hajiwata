@@ -46,9 +46,9 @@ $(document).ready(function(){
       tedradio = $("#tedradio_project").offset().top-window_height,
       metagallery = $("#metagallery_project").offset().top-window_height,
       cafepedia = $("#cafepedia_project").offset().top-window_height,
-      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height()-100,
-      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height()-100,
-      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height()-100,
+      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
+      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
+      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
 
       github = $(".github_contribution").offset().top-window_height,
       // github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
