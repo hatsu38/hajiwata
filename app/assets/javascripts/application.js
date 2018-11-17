@@ -51,7 +51,7 @@ $(document).ready(function(){
       cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height()-100,
 
       github = $(".github_contribution").offset().top-window_height,
-      github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
+      // github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
 
       book_1 = $(".book_1").offset().top-window_height;
       book_2 = $(".book_2").offset().top-window_height;
@@ -78,7 +78,7 @@ $(document).ready(function(){
   metagallery_desplay(now_scroll_pos,metagallery);
   cafepedia_desplay(now_scroll_pos,cafepedia);
 
-  github_desplay(now_scroll_pos,github,github_top);
+  github_desplay(now_scroll_pos,github);
 
   book_1_desplay(now_scroll_pos,book_1);
   book_2_desplay(now_scroll_pos,book_2);
@@ -108,7 +108,7 @@ $(document).ready(function(){
     metagallery_desplay(now_scroll_pos,metagallery,metagallery_top);
     cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top);
 
-    github_desplay(now_scroll_pos,github,github_top);
+    github_desplay(now_scroll_pos,github);
 
     book_1_desplay(now_scroll_pos,book_1);
     book_2_desplay(now_scroll_pos,book_2);
@@ -233,8 +233,8 @@ function cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top){
   }
 }
 
-function github_desplay(now_scroll_pos,github,github_top){
-  if(now_scroll_pos >= github && now_scroll_pos <= github_top){
+function github_desplay(now_scroll_pos,github){
+  if(now_scroll_pos >= github){
     $(".github_contribution").addClass("fadein_anime");
   }else{
     $(".github_contribution").removeClass("fadein_anime");
