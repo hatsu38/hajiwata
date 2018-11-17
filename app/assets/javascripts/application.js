@@ -51,7 +51,7 @@ $(document).ready(function(){
       cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height()-100,
 
       github = $(".github_contribution").offset().top-window_height,
-      github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
+      github_top = $(".github_contribution").offset().top+$(".github_contribution").height()-70,
 
       book_1 = $(".book_1").offset().top-window_height;
       book_2 = $(".book_2").offset().top-window_height;
