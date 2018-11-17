@@ -29,8 +29,8 @@ $(document).ready(function(){
 
       lang_eng = $('.lang_eng').offset().top-window_height,
       lang_jpn = $('.lang_jpn').offset().top-window_height,
-      // lang_eng_top = $('.lang_eng').offset().top,
-      // lang_jpn_top = $('.lang_jpn').offset().top,
+      lang_eng_top = $('.lang_eng').offset().top,
+      lang_jpn_top = $('.lang_jpn').offset().top,
 
       front_skill = $('#front_skill').offset().top-window_height,
       back_skill = $('#back_skill').offset().top-window_height,
@@ -46,12 +46,12 @@ $(document).ready(function(){
       tedradio = $("#tedradio_project").offset().top-window_height,
       metagallery = $("#metagallery_project").offset().top-window_height,
       cafepedia = $("#cafepedia_project").offset().top-window_height,
-      // tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
-      // metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
-      // cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
+      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
+      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
+      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
 
       github = $(".github_contribution").offset().top-window_height,
-      // github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
+      github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
 
       book_1 = $(".book_1").offset().top-window_height;
       book_2 = $(".book_2").offset().top-window_height;
@@ -78,7 +78,7 @@ $(document).ready(function(){
   metagallery_desplay(now_scroll_pos,metagallery);
   cafepedia_desplay(now_scroll_pos,cafepedia);
 
-  github_desplay(now_scroll_pos,github);
+  github_desplay(now_scroll_pos,github,github_top);
 
   book_1_desplay(now_scroll_pos,book_1);
   book_2_desplay(now_scroll_pos,book_2);
@@ -89,12 +89,53 @@ $(document).ready(function(){
 
   $(window).scroll(function() {
     var now_scroll_pos = $(this).scrollTop();
+  var window_height = $(window).height(),
+      now_scroll_pos = $(this).scrollTop(),
+
+      myname = $('h1').offset().top-window_height,
+      myname_top = $('h1').offset().top,
+
+      snsblock = $('.sns_block').offset().top-window_height,
+      snsblock_top = $('.sns_block').offset().top,
+
+      lang_eng = $('.lang_eng').offset().top-window_height,
+      lang_jpn = $('.lang_jpn').offset().top-window_height,
+      lang_eng_top = $('.lang_eng').offset().top,
+      lang_jpn_top = $('.lang_jpn').offset().top,
+
+      front_skill = $('#front_skill').offset().top-window_height,
+      back_skill = $('#back_skill').offset().top-window_height,
+      server_skill = $('#server_skill').offset().top-window_height,
+      front_skill_top = $('#front_skill').offset().top+$("#front_skills").height(),
+      back_skill_top = $('#back_skill').offset().top+$("#back_skills").height(),
+      server_skill_top = $('#server_skill').offset().top+$("#server_skills").height(),
+
+      project_title = $("#project_title").offset().top,
+      skill_title = $("#skill_title").offset().top,
+      act_title = $("#act_title").offset().top,
+
+      tedradio = $("#tedradio_project").offset().top-window_height,
+      metagallery = $("#metagallery_project").offset().top-window_height,
+      cafepedia = $("#cafepedia_project").offset().top-window_height,
+      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
+      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
+      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
+
+      github = $(".github_contribution").offset().top-window_height,
+      github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
+
+      book_1 = $(".book_1").offset().top-window_height;
+      book_2 = $(".book_2").offset().top-window_height;
+      book_3 = $(".book_3").offset().top-window_height;
+      book_4 = $(".book_4").offset().top-window_height;
+      book_5 = $(".book_5").offset().top-window_height;
+      book_6 = $(".book_6").offset().top-window_height;
 
     myname_desplay(now_scroll_pos,myname);
     snsblock_desplay(now_scroll_pos,snsblock);
 
-    eng_prof_desplay(now_scroll_pos,lang_eng);
-    jpn_prof_desplay(now_scroll_pos,lang_jpn);
+    eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top);
+    jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top);
 
     front_skill_desplay(now_scroll_pos,front_skill,front_skill_top);
     back_skill_desplay(now_scroll_pos,back_skill,back_skill_top);
@@ -104,11 +145,11 @@ $(document).ready(function(){
     skill_title_desplay(now_scroll_pos,skill_title,act_title);
     act_title_desplay(now_scroll_pos,act_title);
 
-    tedradio_desplay(now_scroll_pos,tedradio);
-    metagallery_desplay(now_scroll_pos,metagallery);
-    cafepedia_desplay(now_scroll_pos,cafepedia);
+    tedradio_desplay(now_scroll_pos,tedradio,tedradio_top);
+    metagallery_desplay(now_scroll_pos,metagallery,metagallery_top);
+    cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top);
 
-    github_desplay(now_scroll_pos,github);
+    github_desplay(now_scroll_pos,github,github_top);
 
     book_1_desplay(now_scroll_pos,book_1);
     book_2_desplay(now_scroll_pos,book_2);
@@ -135,16 +176,16 @@ function snsblock_desplay(now_scroll_pos,snsblock){
   }
 };
 
-function eng_prof_desplay(now_scroll_pos,lang_eng){
-  if(now_scroll_pos >= lang_eng){
+function eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top){
+  if(now_scroll_pos >= lang_eng && now_scroll_pos <= lang_eng_top){
     $(".lang_eng").addClass("fadein_anime");
   }else{
     $(".lang_eng").removeClass("fadein_anime");
   }
 };
 
-function jpn_prof_desplay(now_scroll_pos,lang_jpn){
-  if(now_scroll_pos >= lang_jpn){
+function jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top){
+  if(now_scroll_pos >= lang_jpn && now_scroll_pos <= lang_jpn_top){
     $(".lang_jpn").addClass("fadein_anime");
   }else{
     $(".lang_jpn").removeClass("fadein_anime");
@@ -211,30 +252,30 @@ function act_title_desplay(now_scroll_pos,act_title){
   }
 }
 
-function tedradio_desplay(now_scroll_pos,tedradio){
-  if(now_scroll_pos >= tedradio){
+function tedradio_desplay(now_scroll_pos,tedradio,tedradio_top){
+  if(now_scroll_pos >= tedradio && now_scroll_pos <= tedradio_top){
     $("#tedradio_project").addClass("fadein_anime");
   }else{
     $("#tedradio_project").removeClass("fadein_anime");
   }
 }
-function metagallery_desplay(now_scroll_pos,metagallery){
-  if(now_scroll_pos >= metagallery){
+function metagallery_desplay(now_scroll_pos,metagallery,metagallery_top){
+  if(now_scroll_pos >= metagallery && now_scroll_pos <= metagallery_top){
     $("#metagallery_project").addClass("fadein_anime");
   }else{
     $("#metagallery_project").removeClass("fadein_anime");
   }
 }
-function cafepedia_desplay(now_scroll_pos,cafepedia){
-  if(now_scroll_pos >= cafepedia){
+function cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top){
+  if(now_scroll_pos >= cafepedia && now_scroll_pos <= cafepedia_top){
     $("#cafepedia_project").addClass("fadein_anime");
   }else{
     $("#cafepedia_project").removeClass("fadein_anime");
   }
 }
 
-function github_desplay(now_scroll_pos,github){
-  if(now_scroll_pos >= github){
+function github_desplay(now_scroll_pos,github,github_top){
+  if(now_scroll_pos >= github && now_scroll_pos <= github_top){
     $(".github_contribution").addClass("fadein_anime");
   }else{
     $(".github_contribution").removeClass("fadein_anime");
