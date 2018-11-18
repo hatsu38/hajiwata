@@ -45,7 +45,7 @@ $(document).ready(function(){
   });
   $("#metagallery_detail").on('click',function(){
     $(this).fadeOut();
-    $("#project_info_metagallery").fadeOut();
+    // $("#project_info_metagallery").fadeOut();
     setTimeout(function(){
       $("#metagallery_ogp_img").fadeIn(900);
       // $("#project_info_metagallery").fadeIn(900);
