@@ -104,12 +104,15 @@ $(document).ready(function(){
     github = $(".github_contribution").offset().top-window_height,
     github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
 
-    book_1 = $(".book_1").offset().top-window_height;
-  book_2 = $(".book_2").offset().top-window_height;
-  book_3 = $(".book_3").offset().top-window_height;
-  book_4 = $(".book_4").offset().top-window_height;
-  book_5 = $(".book_5").offset().top-window_height;
-  book_6 = $(".book_6").offset().top-window_height;
+    book_1 = $(".book_1").offset().top-window_height,
+    book_2 = $(".book_2").offset().top-window_height,
+    book_3 = $(".book_3").offset().top-window_height,
+    book_4 = $(".book_4").offset().top-window_height,
+    book_5 = $(".book_5").offset().top-window_height,
+    book_6 = $(".book_6").offset().top-window_height,
+
+    footer = $("footer").offset().top-window_height;
+
 
   myname_desplay(now_scroll_pos,myname);
   snsblock_desplay(now_scroll_pos,snsblock);
@@ -140,8 +143,8 @@ $(document).ready(function(){
 });
 
 $(window).scroll(function() {
-  var now_scroll_pos = $(this).scrollTop();
-  var window_height = $(window).height(),
+  var now_scroll_pos = $(this).scrollTop(),
+    window_height = $(window).height(),
     now_scroll_pos = $(this).scrollTop(),
 
     myname = $('h1').offset().top-window_height,
@@ -181,7 +184,9 @@ $(window).scroll(function() {
     book_3 = $(".book_3").offset().top-window_height,
     book_4 = $(".book_4").offset().top-window_height,
     book_5 = $(".book_5").offset().top-window_height,
-    book_6 = $(".book_6").offset().top-window_height;
+    book_6 = $(".book_6").offset().top-window_height,
+
+    footer = $("footer").offset().top-window_height;
 
   myname_desplay(now_scroll_pos,myname);
   snsblock_desplay(now_scroll_pos,snsblock);
@@ -376,6 +381,14 @@ function book_6_desplay(now_scroll_pos,book_6){
     $(".book_6").removeClass("fadein_anime");
   }
 }
+
+function footer_desplay(now_scroll_pos,footer){
+  if(now_scroll_pos >= footer){
+    $("footer").addClass("fadein_anime");
+  }else{
+    $("footer").removeClass("fadein_anime");
+  }
+};
 
 function booklog_minishelf_img(json) {
   var items = json["books"];

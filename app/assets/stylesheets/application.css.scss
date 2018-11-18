@@ -86,6 +86,12 @@ section{
   transform: translate(0,0) !important;
   -webkit-transform: translate(0,0) !important;
 }
+footer{
+  .footer_copy{
+    font-size:12px;
+    text-align:center;
+  }
+}
 
 #profile{
   .header_img_block{
