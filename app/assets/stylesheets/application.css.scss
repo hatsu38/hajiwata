@@ -152,7 +152,35 @@ section{
 #projects{
   .project{
     text-align:center;
-    // display:none;
+    .project_detail{
+      display:none;
+      width:80%;
+      margin:6rem auto 0;
+      padding: 5px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+      position:relative;
+      .project_detail_img{
+        position:absolute;
+        width:100%;
+        top:-5rem;
+        text-align:center;
+        img{
+          width:30%;
+          border-radius: 50%;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        }
+      }
+      .project_detail_text{
+        margin-top:5rem;
+        h4{
+          font-size:1.3rem;
+          font-weight:bold;
+        }
+        p{
+          margin:0 10px 10px;
+        }
+      }
+    }
     .project_img{
       position: relative;
       width:80%;

@@ -16,49 +16,78 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
 $(document).ready(function(){
+$("#tedradio_ogp_img").on('click',function(){
+  $(this).hide();
+  $("#tedradio_detail").fadeIn();
+});
+$("#tedradio_detail").on('click',function(){
+  $(this).hide();
+  $("#tedradio_ogp_img").fadeIn();
+});
+
+$("#metagallery_ogp_img").on('click',function(){
+  $(this).hide();
+  $("#metagallery_detail").fadeIn();
+});
+$("#metagallery_detail").on('click',function(){
+  $(this).hide();
+  $("#metagallery_ogp_img").fadeIn();
+});
+
+$("#cafepedia_ogp_img").on('click',function(){
+  $(this).hide();
+  $("#cafepedia_detail").fadeIn();
+});
+$("#cafepedia_detail").on('click',function(){
+  $(this).hide();
+  $("#cafepedia_ogp_img").fadeIn();
+});
+
+
 
   var window_height = $(window).height(),
-      now_scroll_pos = $(this).scrollTop(),
+    now_scroll_pos = $(this).scrollTop(),
 
-      myname = $('h1').offset().top-window_height,
-      // myname_top = $('h1').offset().top,
+    myname = $('h1').offset().top-window_height,
+    // myname_top = $('h1').offset().top,
 
-      snsblock = $('.sns_block').offset().top-window_height,
-      // snsblock_top = $('.sns_block').offset().top,
+    snsblock = $('.sns_block').offset().top-window_height,
+    // snsblock_top = $('.sns_block').offset().top,
 
-      lang_eng = $('.lang_eng').offset().top-window_height,
-      lang_jpn = $('.lang_jpn').offset().top-window_height,
-      lang_eng_top = $('.lang_eng').offset().top,
-      lang_jpn_top = $('.lang_jpn').offset().top,
+    lang_eng = $('.lang_eng').offset().top-window_height,
+    lang_jpn = $('.lang_jpn').offset().top-window_height,
+    lang_eng_top = $('.lang_eng').offset().top,
+    lang_jpn_top = $('.lang_jpn').offset().top,
 
-      front_skill = $('#front_skill').offset().top-window_height,
-      back_skill = $('#back_skill').offset().top-window_height,
-      server_skill = $('#server_skill').offset().top-window_height,
-      front_skill_top = $('#front_skill').offset().top+$("#front_skills").height(),
-      back_skill_top = $('#back_skill').offset().top+$("#back_skills").height(),
-      server_skill_top = $('#server_skill').offset().top+$("#server_skills").height(),
+    front_skill = $('#front_skill').offset().top-window_height,
+    back_skill = $('#back_skill').offset().top-window_height,
+    server_skill = $('#server_skill').offset().top-window_height,
+    front_skill_top = $('#front_skill').offset().top+$("#front_skills").height(),
+    back_skill_top = $('#back_skill').offset().top+$("#back_skills").height(),
+    server_skill_top = $('#server_skill').offset().top+$("#server_skills").height(),
 
-      project_title = $("#project_title").offset().top,
-      skill_title = $("#skill_title").offset().top,
-      act_title = $("#act_title").offset().top,
+    project_title = $("#project_title").offset().top,
+    skill_title = $("#skill_title").offset().top,
+    act_title = $("#act_title").offset().top,
 
-      tedradio = $("#tedradio_project").offset().top-window_height,
-      metagallery = $("#metagallery_project").offset().top-window_height,
-      cafepedia = $("#cafepedia_project").offset().top-window_height,
-      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
-      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
-      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
+    tedradio = $("#tedradio_project").offset().top-window_height,
+    metagallery = $("#metagallery_project").offset().top-window_height,
+    cafepedia = $("#cafepedia_project").offset().top-window_height,
+    tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
+    metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
+    cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
 
-      github = $(".github_contribution").offset().top-window_height,
-      github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
+    github = $(".github_contribution").offset().top-window_height,
+    github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
 
-      book_1 = $(".book_1").offset().top-window_height;
-      book_2 = $(".book_2").offset().top-window_height;
-      book_3 = $(".book_3").offset().top-window_height;
-      book_4 = $(".book_4").offset().top-window_height;
-      book_5 = $(".book_5").offset().top-window_height;
-      book_6 = $(".book_6").offset().top-window_height;
+    book_1 = $(".book_1").offset().top-window_height;
+  book_2 = $(".book_2").offset().top-window_height;
+  book_3 = $(".book_3").offset().top-window_height;
+  book_4 = $(".book_4").offset().top-window_height;
+  book_5 = $(".book_5").offset().top-window_height;
+  book_6 = $(".book_6").offset().top-window_height;
 
   myname_desplay(now_scroll_pos,myname);
   snsblock_desplay(now_scroll_pos,snsblock);
@@ -86,78 +115,78 @@ $(document).ready(function(){
   book_4_desplay(now_scroll_pos,book_4);
   book_5_desplay(now_scroll_pos,book_5);
   book_6_desplay(now_scroll_pos,book_6);
+});
 
-  $(window).scroll(function() {
-    var now_scroll_pos = $(this).scrollTop();
-    var window_height = $(window).height(),
-        now_scroll_pos = $(this).scrollTop(),
+$(window).scroll(function() {
+  var now_scroll_pos = $(this).scrollTop();
+  var window_height = $(window).height(),
+    now_scroll_pos = $(this).scrollTop(),
 
-      myname = $('h1').offset().top-window_height,
-      myname_top = $('h1').offset().top,
+    myname = $('h1').offset().top-window_height,
+    myname_top = $('h1').offset().top,
 
-      snsblock = $('.sns_block').offset().top-window_height,
-      snsblock_top = $('.sns_block').offset().top,
+    snsblock = $('.sns_block').offset().top-window_height,
+    snsblock_top = $('.sns_block').offset().top,
 
-      lang_eng = $('.lang_eng').offset().top-window_height,
-      lang_jpn = $('.lang_jpn').offset().top-window_height,
-      lang_eng_top = $('.lang_eng').offset().top,
-      lang_jpn_top = $('.lang_jpn').offset().top,
+    lang_eng = $('.lang_eng').offset().top-window_height,
+    lang_jpn = $('.lang_jpn').offset().top-window_height,
+    lang_eng_top = $('.lang_eng').offset().top,
+    lang_jpn_top = $('.lang_jpn').offset().top,
 
-      front_skill = $('#front_skill').offset().top-window_height,
-      back_skill = $('#back_skill').offset().top-window_height,
-      server_skill = $('#server_skill').offset().top-window_height,
-      front_skill_top = $('#front_skill').offset().top+$("#front_skills").height(),
-      back_skill_top = $('#back_skill').offset().top+$("#back_skills").height(),
-      server_skill_top = $('#server_skill').offset().top+$("#server_skills").height(),
+    front_skill = $('#front_skill').offset().top-window_height,
+    back_skill = $('#back_skill').offset().top-window_height,
+    server_skill = $('#server_skill').offset().top-window_height,
+    front_skill_top = $('#front_skill').offset().top+$("#front_skills").height(),
+    back_skill_top = $('#back_skill').offset().top+$("#back_skills").height(),
+    server_skill_top = $('#server_skill').offset().top+$("#server_skills").height(),
 
-      project_title = $("#project_title").offset().top,
-      skill_title = $("#skill_title").offset().top,
-      act_title = $("#act_title").offset().top,
+    project_title = $("#project_title").offset().top,
+    skill_title = $("#skill_title").offset().top,
+    act_title = $("#act_title").offset().top,
 
-      tedradio = $("#tedradio_project").offset().top-window_height,
-      metagallery = $("#metagallery_project").offset().top-window_height,
-      cafepedia = $("#cafepedia_project").offset().top-window_height,
-      tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
-      metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
-      cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
+    tedradio = $("#tedradio_project").offset().top-window_height,
+    metagallery = $("#metagallery_project").offset().top-window_height,
+    cafepedia = $("#cafepedia_project").offset().top-window_height,
+    tedradio_top = $("#tedradio_project").offset().top+$("#tedradio_project").height(),
+    metagallery_top = $("#metagallery_project").offset().top+$("#metagallery_project").height(),
+    cafepedia_top = $("#cafepedia_project").offset().top+$("#cafepedia_project").height(),
 
-      github = $(".github_contribution").offset().top-window_height,
-      github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
+    github = $(".github_contribution").offset().top-window_height,
+    github_top = $(".github_contribution").offset().top+$(".github_contribution").height(),
 
-      book_1 = $(".book_1").offset().top-window_height,
-      book_2 = $(".book_2").offset().top-window_height,
-      book_3 = $(".book_3").offset().top-window_height,
-      book_4 = $(".book_4").offset().top-window_height,
-      book_5 = $(".book_5").offset().top-window_height,
-      book_6 = $(".book_6").offset().top-window_height;
+    book_1 = $(".book_1").offset().top-window_height,
+    book_2 = $(".book_2").offset().top-window_height,
+    book_3 = $(".book_3").offset().top-window_height,
+    book_4 = $(".book_4").offset().top-window_height,
+    book_5 = $(".book_5").offset().top-window_height,
+    book_6 = $(".book_6").offset().top-window_height;
 
-    myname_desplay(now_scroll_pos,myname);
-    snsblock_desplay(now_scroll_pos,snsblock);
+  myname_desplay(now_scroll_pos,myname);
+  snsblock_desplay(now_scroll_pos,snsblock);
 
-    eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top);
-    jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top);
+  eng_prof_desplay(now_scroll_pos,lang_eng,lang_eng_top);
+  jpn_prof_desplay(now_scroll_pos,lang_jpn,lang_jpn_top);
 
-    front_skill_desplay(now_scroll_pos,front_skill,front_skill_top);
-    back_skill_desplay(now_scroll_pos,back_skill,back_skill_top);
-    server_skill_desplay(now_scroll_pos,server_skill,server_skill_top);
+  front_skill_desplay(now_scroll_pos,front_skill,front_skill_top);
+  back_skill_desplay(now_scroll_pos,back_skill,back_skill_top);
+  server_skill_desplay(now_scroll_pos,server_skill,server_skill_top);
 
-    project_title_desplay(now_scroll_pos,project_title,skill_title);
-    skill_title_desplay(now_scroll_pos,skill_title,act_title);
-    act_title_desplay(now_scroll_pos,act_title);
+  project_title_desplay(now_scroll_pos,project_title,skill_title);
+  skill_title_desplay(now_scroll_pos,skill_title,act_title);
+  act_title_desplay(now_scroll_pos,act_title);
 
-    tedradio_desplay(now_scroll_pos,tedradio,tedradio_top);
-    metagallery_desplay(now_scroll_pos,metagallery,metagallery_top);
-    cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top);
+  tedradio_desplay(now_scroll_pos,tedradio,tedradio_top);
+  metagallery_desplay(now_scroll_pos,metagallery,metagallery_top);
+  cafepedia_desplay(now_scroll_pos,cafepedia,cafepedia_top);
 
-    github_desplay(now_scroll_pos,github,github_top);
+  github_desplay(now_scroll_pos,github,github_top);
 
-    book_1_desplay(now_scroll_pos,book_1);
-    book_2_desplay(now_scroll_pos,book_2);
-    book_3_desplay(now_scroll_pos,book_3);
-    book_4_desplay(now_scroll_pos,book_4);
-    book_5_desplay(now_scroll_pos,book_5);
-    book_6_desplay(now_scroll_pos,book_6);
-  });
+  book_1_desplay(now_scroll_pos,book_1);
+  book_2_desplay(now_scroll_pos,book_2);
+  book_3_desplay(now_scroll_pos,book_3);
+  book_4_desplay(now_scroll_pos,book_4);
+  book_5_desplay(now_scroll_pos,book_5);
+  book_6_desplay(now_scroll_pos,book_6);
 });
 
 function myname_desplay(now_scroll_pos,myname){
@@ -324,18 +353,6 @@ function book_6_desplay(now_scroll_pos,book_6){
   }else{
     $(".book_6").removeClass("fadein_anime");
   }
-}
-
-function booklog_minishelf(json) {
-  var items = json["books"];
-  var html = "";
-
-  for(var i = 0; i < items.length; i++) {
-    var elem = items[i];
-    var text = '<ul class="bookshelf"><li class="bookImage"><a href="' + elem["url"] + '" target="_blank"><img src="' + elem["image"] + '" title="' + elem["title"] + '"width="52" height="75" alt="No Image" /></a></li><li class="bookTitle"><a href="' + elem["url"] + '" target="_blank">' + elem["title"] + '</a><div class="bookAuthor">' + elem["author"] + '</div></li></ul>';
-    html += text;
-  }
-  document.getElementById("recent_books").innerHTML = html;
 }
 
 function booklog_minishelf_img(json) {
