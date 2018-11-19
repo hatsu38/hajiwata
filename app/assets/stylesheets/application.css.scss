@@ -17,6 +17,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+    font-family: OptimaLTPro-Roman,Ryumin Regular KL,serif;
+}
 section{
   background-color:#fff;
 }
@@ -39,7 +42,7 @@ section{
   z-index:4;
 }
 .parallax_content_project{
-  top:65px;
+  top:50px;
   z-index:0;
 }
 .parallax_title_skill{
@@ -47,7 +50,7 @@ section{
   z-index:6;
 }
 .parallax_content_skill{
-  top:65px;
+  top:50px;
   z-index:0;
 }
 .parallax_title_act{
@@ -55,7 +58,7 @@ section{
   z-index:8;
 }
 .parallax_content_act{
-  top:65px;
+  top:50px;
   z-index:0;
 }
 
@@ -65,14 +68,14 @@ section{
 }
 .section_title{
   font-size:2.2rem;
-  color:#525558;
+  color:#525058;
   text-align:center;
-  margin:0;
-  line-height:65px;
+  margin:.8rem auto .8rem;
+  line-height:50px;
 }
 .section_title_top{
   background: rgb(216, 235, 233);
-  color:#485554;
+  color:#485054;
 }
 
 .hidden_anime{
