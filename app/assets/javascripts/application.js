@@ -22,51 +22,51 @@ $(document).ready(function(){
     $(this).fadeOut();
     // $("#project_info_tedradio").fadeOut();
     setTimeout(function(){
-      $('#tedradio_detail').fadeIn(900);
-      // $("#project_info_tedradio").fadeIn(900);
-    },380);
+      $('#tedradio_detail').fadeIn(1100);
+      // $("#project_info_tedradio").fadeIn(1100);
+    },400);
   });
   $("#tedradio_detail").on('click',function(){
     $(this).fadeOut();
     // $("#project_info_tedradio").fadeOut();
     setTimeout(function(){
-      $("#tedradio_ogp_img").fadeIn(900);
-      // $("#project_info_tedradio").fadeIn(900);
-    },380);
+      $("#tedradio_ogp_img").fadeIn(1100);
+      // $("#project_info_tedradio").fadeIn(1100);
+    },400);
   });
 
   $("#metagallery_ogp_img").on('click',function(){
     $(this).fadeOut();
     // $("#project_info_metagallery").fadeOut();
     setTimeout(function(){
-      $("#metagallery_detail").fadeIn(900);
-      // $("#project_info_metagallery").fadeIn(900);
-    },380);
+      $("#metagallery_detail").fadeIn(1100);
+      // $("#project_info_metagallery").fadeIn(1100);
+    },400);
   });
   $("#metagallery_detail").on('click',function(){
     $(this).fadeOut();
     // $("#project_info_metagallery").fadeOut();
     setTimeout(function(){
-      $("#metagallery_ogp_img").fadeIn(900);
-      // $("#project_info_metagallery").fadeIn(900);
-    },380);
+      $("#metagallery_ogp_img").fadeIn(1100);
+      // $("#project_info_metagallery").fadeIn(1100);
+    },400);
   });
 
   $("#cafepedia_ogp_img").on('click',function(){
     $(this).fadeOut();
     // $("#project_info_cafepedia").fadeOut();
     setTimeout(function(){
-      $("#cafepedia_detail").fadeIn(900);
-      // $("#project_info_cafepedia").fadeIn(900);
-    },380);
+      $("#cafepedia_detail").fadeIn(1100);
+      // $("#project_info_cafepedia").fadeIn(1100);
+    },400);
   });
   $("#cafepedia_detail").on('click',function(){
     $(this).fadeOut();
     // $("#project_info_cafepedia").fadeOut();
     setTimeout(function(){
-      $("#cafepedia_ogp_img").fadeIn(900);
-      // $("#project_info_cafepedia").fadeIn(900);
-    },380);
+      $("#cafepedia_ogp_img").fadeIn(1100);
+      // $("#project_info_cafepedia").fadeIn(1100);
+    },400);
   });
 
   var window_height = $(window).height(),
