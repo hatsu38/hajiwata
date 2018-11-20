@@ -99,6 +99,27 @@ footer{
 #profile{
   .header_img_block{
     position:relative;
+    .hp_title{
+      line-height:180px;
+      text-align:center;
+      background-color:#222;
+      color:#fff;
+      // background-color:#d8ebe9;
+      // color:#485054;
+      margin:0;
+      border-bottom:1px solid #bbb;
+      padding-bottom:10px;
+    }
+    .background_icons{
+        position:absolute;
+        top:110px;
+        width:100%;
+        text-align:center;
+      i{
+        color:#fff;
+        padding:5px;
+      }
+    }
     .profile_header{
       height:180px;
       width:100%;
@@ -112,9 +133,9 @@ footer{
       text-align:center;
       .profile_icon{
         border-radius:50%;
-        width:100px;
-        height:100px;
-        border:1px solid #fff;
+        width:85px;
+        height:85px;
+        border:1px solid #ccc;
       }
     }
   }
