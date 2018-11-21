@@ -112,13 +112,14 @@ footer{
     }
     .background_icons{
         position:absolute;
-        top:110px;
+        top:115px;
         width:100%;
         text-align:center;
+        font-size:1.2rem;
       i{
         color:#fff;
         color:#485054;
-        padding:5px;
+        margin:7px;
       }
     }
     .profile_header{
@@ -416,6 +417,13 @@ footer{
         font-size:1.44rem;
       }
     }
+    .header_img_block{
+      .background_icons{
+        i{
+          margin:7px 20px;
+        }
+      }
+    }
   }
   #projects{
     .parallax_content_project{
@@ -447,6 +455,7 @@ footer{
   #act{
     .parallax_content_act{
       width:80%;
+      max-width:760px;
       margin:0 auto;
       .github_contribution{
         .github_grass{
