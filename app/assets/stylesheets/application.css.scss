@@ -397,3 +397,69 @@ footer{
     }
   }
 }
+
+
+@media screen and (min-width: 640px) {
+  #profile{
+    .profile_text_block{
+      display:flex;
+      width:80%;
+      margin:0 auto;
+      p{
+        width:50%;
+        padding:5px;
+      }
+      .lang_eng{
+        border-right:1px solid #aaa;
+      }
+      .lang_jpn{
+        font-size:1.44rem;
+      }
+    }
+  }
+  #projects{
+    .parallax_content_project{
+      width:80%;
+      margin:0 auto;
+      display:flex;
+      .project{
+        width:33%;
+        .project_img,.project_detail{
+          width:90%;
+        }
+      }
+    }
+  }
+  #skill{
+    .parallax_content_skill{
+      width:80%;
+      margin:0 auto;
+      display:flex;
+      .skill_lists{
+        width:33%;
+        padding:5px;
+      }
+      #front_skills,#back_skills,#server_skills{
+        margin-top:0;
+      }
+    }
+  }
+  #act{
+    .parallax_content_act{
+      width:80%;
+      margin:0 auto;
+      .github_contribution{
+        .github_grass{
+          width:100%;
+        }
+      }
+      #recent_books{
+        width:90%;
+        .bookImage{
+          width:10%;
+        }
+      }
+    }
+  }
+}
+
