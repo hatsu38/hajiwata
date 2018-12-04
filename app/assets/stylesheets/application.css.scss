@@ -17,8 +17,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body{
-    font-family: OptimaLTPro-Roman,Ryumin Regular KL,serif;
+@media only screen and (min-width: 0){
+  html{
+      font-size:10px !important;
+    body{
+      font-family: OptimaLTPro-Roman,Ryumin Regular KL,serif;
+      font-size:10px;
+    }
+  }
 }
 section{
   background-color:#fff;
@@ -196,6 +202,7 @@ footer{
       }
       .project_detail_text{
         margin-top:5rem;
+          font-size:1.3rem;
         h4{
           font-size:1.3rem;
           font-weight:bold;
@@ -262,6 +269,7 @@ footer{
           height:12px;
           margin:0;
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+          background-color:#fff;
           .progress-bar{
             line-height:12px;
           }
@@ -398,6 +406,43 @@ footer{
     }
   }
 }
+.fixed-action-btn.direction-left{
+  .share_btn{
+    background-color:#d8ebe9;
+  }
+  .btn-floating.btn-large{
+    width: 35px;
+    height: 35px;
+    line-height:35px;
+    background-color:#485054;
+    i{
+      line-height: 35px;
+      font-size:1.8rem;
+    }
+  }
+  ul{
+    right:34px !important;
+    top:35% !important;
+    li{
+      margin:0px 10px 0 0 !important;
+      .btn-floating{
+        width:30px;
+        height:30px;
+        line-height:30px;
+        i{
+          line-height:30px;
+        }
+      }
+      .twitter{
+        background-color:#00aced;
+      }
+      .facebook{
+        background-color:#305097;
+      }
+    }
+  }
+}
+
 
 
 @media screen and (min-width: 640px) {
