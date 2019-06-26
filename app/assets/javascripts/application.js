@@ -420,4 +420,3 @@ function booklog_minishelf_img(json) {
   }
   document.getElementById("recent_books").innerHTML = html;
 }
-
